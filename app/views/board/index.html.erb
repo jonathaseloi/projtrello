@@ -7,7 +7,8 @@
   <div class="card-body">
     <div class="form-inline">
 		<p>Selecione um Board
-		<select class="selectpicker" title="Selecione" onchange="location = this.value;">
+		<select class="selectpicker" title="Selecione" onchange="location = this.value;" data-none-selected-text="please select...">
+			<option>Selecione</option>
 			<% @boards.each do |board|%>
 				<option value="<%= show_board_path(:id => board.id)%>"><%= board.name %></option>
 			<% end %>
