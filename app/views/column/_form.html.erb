@@ -1,0 +1,6 @@
+<div class="form-inline margin5left">
+	<%= simple_form_for :column, url: create_column_path(), wrapper: :inline_form do |form| %>
+		<p>Criar nova etapa: <%= form.input_field :name %> <%= form.submit "Salvar", :class => "btn btn-info btn-sm margin5right" %></p>
+		
+	<% end %>	
+</div>

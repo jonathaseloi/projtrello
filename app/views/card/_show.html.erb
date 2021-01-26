@@ -1,0 +1,17 @@
+<div data-controller="card" data-column="<%= columnid %>">
+	<% cards.order(position: :asc).each do |card|%>
+		<div class="card" style="margin-top:3px;" data-id="<%= card.id %>" data-id-column="<%= card.column_id %>" data-drag-url="/columns/:column_id/cards/:id/move">	
+			<div class="card-body">
+				<%= link_to get_modalshow_card_path(card.id), remote: true, "data-toggle" => "modal", 'data-target' => '#cardmodalshow', 'data-id' => card.id do %>
+					<%= card.title %>
+				<% end %>
+				<div class="modal" id="cardmodalshow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+				<div class="inline alignright test">
+					<%= link_to "Editar", get_card_path(card.id), :class => "btn btn-info btn-sm margin5right", remote: true, "data-toggle" => "modal", 'data-target' => '#cardmodaledit', 'data-id' => card.id %>
+
+					<div class="modal" id="cardmodaledit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,7 @@
+<div class="form-inline">
+	<%= simple_form_for Board.new, url: "/boards", wrapper: :inline_form do |form| %>
+		<%= form.label :Nome %>
+		<%= form.input_field :name %>
+		<%= form.submit %>
+	<% end %>
+</div>

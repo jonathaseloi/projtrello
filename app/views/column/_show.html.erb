@@ -1,0 +1,27 @@
+<div class="wrapper">
+	<div class="wrapper_child" data-controller="column">
+		<% @columns.order(position: :asc).each do |column|%>
+			<div class="tab" data-id="<%= column.id %>"  data-drag-url="/columns/:id/move">
+				<div class="background" style="width: 100%; display: table;">
+				    <div style="display: table-row">
+						<div class="inline" style="vertical-align: middle;display: table-cell;max-width: 100px;">
+							<p class="ellipsis"><%= column.name %></p>
+						</div>
+						<div class="inline alignright" style="margin-right: 5px">
+							<%= link_to "Editar", get_column_path(column.id), :class => "btn btn-info btn-sm margin5right", remote: true, "data-toggle" => "modal", 'data-target' => '#exampleModal3', 'data-id' => column.id %>
+							<div class="modal" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+
+							<%= button_to("Excluir", delete_column_path(column), :method => :delete, :class => 'btn btn-info btn-sm margin5right') %>
+
+							<%= link_to "+", get_column_card_path(column.id), :class => "btn btn-info btn-sm", remote: true, "data-toggle" => "modal", 'data-target' => '#cardmodal', 'data-id' => column.id %>
+					      	<div class="modal" id="cardmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+						</div>
+				    </div>
+				</div>
+				<div>
+				<%= render 'card/show', cards: column.cards, columnid: column.id %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

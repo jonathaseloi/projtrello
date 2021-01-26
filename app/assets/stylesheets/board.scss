@@ -1,0 +1,46 @@
+// Place all the styles related to the Board controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.wrapper {
+	height: 60vh;
+	white-space: nowrap;
+	margin-left: 10px;
+}
+
+.ellipsis{
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.tab {
+	width: 300px;
+	height: 100%;
+	display: inline-table;
+	margin: 2px;
+	white-space: nowrap;
+}
+
+.background {
+	padding:5px;
+	background-color: gray !important; 
+}
+
+.inline {
+	display: inline-flex;
+}
+
+.alignright {
+	float: right;
+}
+
+.margin5right {
+	margin-right: 5px;
+}
+
+.margin5left {
+	margin-left: 5px;
+}
+
+.vertical{
+	vertical-align: top;
+}

@@ -1,0 +1,17 @@
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Editar Board</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+	    <div class="form-inline">
+			<%= simple_form_for @board, url: board_edit_name_path(), wrapper: :inline_form do |form| %>
+				<p>Nome: <%= form.input_field :name %> <%= form.submit "Salvar" %></p>
+			<% end %>
+		</div>
+  </div>
+</div>
+</div>

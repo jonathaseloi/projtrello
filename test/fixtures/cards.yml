@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  position: 1
+  description: MyText
+  dateCreate: 2021-01-20
+  dateFinish: 2021-01-20
+
+two:
+  title: MyString
+  position: 1
+  description: MyText
+  dateCreate: 2021-01-20
+  dateFinish: 2021-01-20
