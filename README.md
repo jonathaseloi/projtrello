@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Heroku
+https://projtrello.herokuapp.com/
 
-Things you may want to cover:
+## Ruby version 
+Ruby 2.7.2
 
-* Ruby version
+## Gems
+* gem 'simple_form'
 
-* System dependencies
+* gem 'bootstrap', '~> 5.0.0.beta1'
 
-* Configuration
+* gem 'jquery-rails'
 
-* Database creation
+* gem 'rspec-rails'
 
-* Database initialization
+* gem "acts_as_list", "~> 1.0"
 
-* How to run the test suite
+* gem 'byebug'
 
-* Services (job queues, cache servers, search engines, etc.)
+## Others
 
-* Deployment instructions
+* rails webpacker:install:stimulus
 
-* ...
+* yarn add sortablejs
+
